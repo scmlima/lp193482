@@ -1,3 +1,13 @@
+/* --------------------------------------------------------------------------
+Disciplina  : Lógica de Programação, turma IB, 2026S1
+Nome        : Sarah Cristine Moraes Lima
+Linguagem   : C
+Problema    : https://judge.beecrowd.com/pt/problems/view/2757
+Data        : 13/04/2026
+Objetivo    : Escrever números de entrada com espaçamento. 
+Aprendizado : como imṕrimir com espaçamento.
+-------------------------------------------------------------------------- */
+
 #include <stdio.h>
 
 int main() {
