@@ -1,3 +1,13 @@
+/* --------------------------------------------------------------------------
+Disciplina  : Lógica de Programação, turma IB, 2026S1
+Nome        : Sarah Cristine Moraes Lima
+Linguagem   : C
+Problema    : https://judge.beecrowd.com/pt/problems/view/2758
+Data        : 13/04/2026
+Objetivo    : entrada e saída de números reais.
+Aprendizado : como usar float e double, selecionando a quantidade de casas depois da vírgula.
+-------------------------------------------------------------------------- */
+
 #inclua <stdio.h>
 
 int main() {
