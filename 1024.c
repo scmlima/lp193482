@@ -1,3 +1,12 @@
+/* --------------------------------------------------------------------------
+Disciplina  : Lógica de Programação, turma IB, 2026S1
+Nome        : Sarah Cristine Moraes Lima
+Linguagem   : C
+Problema    : https://judge.beecrowd.com/pt/problems/view/1024
+Data        : 07/05/2026
+Objetivo    : criptografar uma string lida
+Aprendizado : uso das bibliotecas <string.h> e <ctype.h> e manuseio de strings
+-------------------------------------------------------------------------- */
 
 #include <stdio.h> //scanf e pritf
 #include <ctype.h> //isalpha 
