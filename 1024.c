@@ -53,6 +53,8 @@ int main() {
  necessário usar uotros métodos para ler uma frase com espaços. No
  caso do exercício, foi usado o ("%^s") que diz "leia tudo exceto o '\n'",
  fazendo com que seja lido os espaços também.
+
+  !!! estudar fgets para leitura de string ao invés de scanf !!!
    
  
   -----------------------------------------------------------*/
