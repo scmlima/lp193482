@@ -8,7 +8,7 @@ Objetivo    : comparar o final de duas strings
 Aprendizado : uso da biblioteca string e suas funções strlen, strcpy e strcmp
 -------------------------------------------------------------------------- */
 
-#include <string.h>
+#include <string.h> //scanf e printf
 #include <stdio.h> //strlen, strcpy e strcmp 
 
 int main(){
@@ -21,15 +21,15 @@ int main(){
         scanf("%s %s", A, B);
     
     
-      if(strlen(B) > strlen(A)){ //strlen calcula o tamanho da string
+      if(strlen(B) > strlen(A)){ 
         
           printf("nao encaixa\n");
    
      } else {
         
-           strcpy(A, A + (strlen(A) - strlen(B))); //strcpy(A, B) sobrescreve o valor de B sobre A (se couber)
+           strcpy(A, A + (strlen(A) - strlen(B))); 
         
-          if (!strcmp(A, B)){ //strcmp compara o tamanho de A e B e retorna 0 se for igual (neste caso retorna 1(vdd) por ter um "1")
+          if (!strcmp(A, B)){ 
             
               printf("encaixa\n");
        
