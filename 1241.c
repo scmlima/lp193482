@@ -54,10 +54,12 @@ strcpy(destino, origem); = substritui o valor de A por B. Exemplo:
  strcpy (A, B); 
  printf("%s", A); // leitura: "goodbye", pois A assumiu o valor de B
 
-strcmp(A, B); = compara duas strings, caractere por caractere,
+ strcmp(A, B); = compara duas strings, caractere por caractere,
 e retorna um valor inteiro dependendo do resultado. Ex:
  strcmp (abc, abc); // retorna 0 -> iguais
  strcmp (abc, xyz); // retorna < 0 -> "abc" vem antes
  strcmp (xyz, abc) // retorna > 0 -> "zyx vem" depois
+  na questão usamos !strcmp pois se A = B, retornaria 0 ("falso" em C),
+ mas com ! retornaria "verdadeiro".
 
 --------------------------------------------------------------------*/
