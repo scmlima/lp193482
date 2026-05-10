@@ -14,7 +14,7 @@ Aprendizado : uso das bibliotecas <string.h> e <ctype.h> e manuseio de strings
  
 int main() {
  
-    int N, n;                           //n = tamanho, N = quantidade de strings
+    int N, n;                           //n = tamanho, N = quantidade de linhas
     char aux, txt[1001];
     
     scanf("%i\n", &N);
