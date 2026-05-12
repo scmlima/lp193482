@@ -8,47 +8,54 @@ Objetivo    : criptografar uma string lida
 Aprendizado : uso das bibliotecas <string.h> e <ctype.h> e manuseio de strings
 -------------------------------------------------------------------------- */
 
-#include <stdio.h> //scanf e pritf
-#include <ctype.h> //isalpha 
-#include <string.h> //strlen
+#include <stdio.h> //fgets, sizeof, scanf, printf, getchar
+#include <ctype.h> // isalpha, 
+#include <string.h> //strlen, strcspn, strcpy
  
 int main() {
  
-    int N, n;                           //n = tamanho, N = quantidade de linhas
-    char aux, txt[1001];
+    int N, i = 1, tam;
+    char txt[1001], copy[1001];
     
-    scanf("%i\n", &N);
+    scanf("%i", &N);
+    getchar(); //estudar getchar
     
-    for(int i = 0; i < N; i++){          // roda o código for para cada string digitada (N armazena a quantidade a rodar)
-        scanf("%[^\n]\n", &txt);        /*o ^ no especificador funciona como negação, dizendo: "leia tudo, menos o '\n'!".
-                                          O []\n ao final garante que o \n seja consumido/apagado do buffer (local de memória de string)
-                                          para evitar que ele apareça numa leitura posterior*/
-        
-        n = strlen(txt);                //n armazena o tamanho da string M.
-        
-        for(int j = 0; j < n; j++){    // basicamente roda o for para cada letra da string
-            if(isalpha(txt[j])){       //a função ocorre para cada letra maiúscula u minúscula (isalpha)
-                txt[j] += 3;           // muda cada letra para outra 3 posições a frente (seguindo assim o ASCII)
+    do{
+        fgets(txt, sizeof(txt), stdin);
+        txt[strcspn(txt, "\n")] = '\0'; /*strcspn busca na variavel txt a posicao do primeiro \n encontrado.*/
+       
+       tam = strlen(txt);
+       
+       
+       for(int j = 0; j < tam; j++){
+            if(isalpha(txt[j])){
+                txt[j] += 3;
             }
-        }
+       }
+       
+       strcpy(copy, txt);
+       
+       for(int j = 0; j < tam/2; j++){
+           txt[j] = txt[tam - 1 - j];
+           txt[tam - 1 - j] = copy[j];
+       }
+       
+       for(int j = tam/2; j < tam; j++){
+           txt[j]--;
+       }
+        i++;
         
-        for(int j = 0; j < n/2; j++){
-            aux = txt[j];
-            txt[j] = txt[n - 1 - j];
-            txt[n - 1 - j] = aux;
-        }
-        
-        for(int j = n/2; j < n; j++){
-            --txt[j];
-        } 
         printf("%s\n", txt);
-            
-            
-    }
+        
+    }while(i <= N);
+    
+ 
     return 0;
 }
 /*-----------------------------------------------------------
                       ~ Anotações ~
+ (o código foi refeito para melhor entendimento e correção de bugs)
+                      
    O scanf("%s") lê apenas strings até o espaço em branco, sendo
  necessário usar uotros métodos para ler uma frase com espaços. No
  caso do exercício, foi usado o ("%^s") que diz "leia tudo exceto o '\n'",
