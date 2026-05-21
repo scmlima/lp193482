@@ -5,7 +5,7 @@ Linguagem   : C
 Problema    : https://judge.beecrowd.com/pt/problems/view/1534
 Data        : 17/05/2026
 Objetivo    : 
-Aprendizado : 
+Aprendizado : uso de malloc e ponteiros
 -------------------------------------------------------------------------- */
 
 #include <stdio.h>
