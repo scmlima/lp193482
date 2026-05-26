@@ -8,6 +8,7 @@ Objetivo    :
 Aprendizado : 
 Dúvidas     : 
 -------------------------------------------------------------------------- */
+//refazer até fixar
 
 #include <stdlib.h>
 #include <string.h>
