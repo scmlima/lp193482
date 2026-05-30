@@ -1,4 +1,16 @@
+/* --------------------------------------------------------------------------
+Disciplina  : Lógica de Programação, turma IB, 2026S1
+Nome        : Sarah Cristine Moraes Lima
+Linguagem   : C
+Problema    : https://judge.beecrowd.com/pt/problems/view/1441
+Data        : 30/05/2026
+Objetivo    : 
+Aprendizado : 
+Dúvida      : foi apresentado dificuldade para compreender o exercício e 
+fazê-lo com recursão. Necessário treino.
+-------------------------------------------------------------------------- */
 
+    //REFAZER COM RECURSÃO!! 
 
 #include <stdio.h>
 
