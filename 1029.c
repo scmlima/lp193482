@@ -15,7 +15,6 @@ int contador = 0;
 
 int fib(int n){
     contador++;
-    int q;
     
     if (n == 0)
         return 0;
@@ -29,15 +28,13 @@ int main() {
     int N; 
     scanf("%i", &N);
     
-    while(N > 0){
-        contador = 0;
+    for(int i = 0; i < N; i++){
+        contador = -1;
         int F, result;
         scanf("%i", &F);
         
         result = fib(F);
-        contador -= 1;
         printf("fib(%i) = %i calls = %i\n", F, contador, result);
-        N--;
     }
     return 0;
 }
