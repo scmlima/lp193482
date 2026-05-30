@@ -2,11 +2,11 @@
 Disciplina  : Lógica de Programação, turma IB, 2026S1
 Nome        : Sarah Cristine Moraes Lima
 Linguagem   : C
-Problema    : https://judge.beecrowd.com/pt/problems/view/1017
-Data        : 22/05/2026
-Objetivo    : Calcular a quantidade de combustível necessária numa viagem
-Aprendizado : 
-Dúvida      : por que o beecrowd implica tanto com o "\n"?
+Problema    : https://judge.beecrowd.com/pt/problems/view/1028
+Data        : 30/05/2026
+Objetivo    : encontrar o MDC das cartas.
+Aprendizado : algoritmo de Euclides
+Dúvida      : 
 -------------------------------------------------------------------------- */
 
 #include <stdio.h>
