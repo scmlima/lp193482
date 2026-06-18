@@ -1,3 +1,13 @@
+/* --------------------------------------------------------------------------
+Disciplina  : Lógica de Programação, turma IB, 2026S1
+Nome        : Sarah Cristine Moraes Lima
+Linguagem   : C
+Problema    : https://judge.beecrowd.com/pt/problems/view/1383
+Data        : 18/06/2026
+Objetivo    : Checar se um determinado tabuleiro sudoku segue as regras do jogo.
+Aprendizado : evitar o "efeito esquecimento" e por em prática todo aprendizado do curso.
+-------------------------------------------------------------------------- */
+
 #include <stdio.h>
 
 int bloco(int matriz[9][9], int iniciolinha, int iniciocoluna){
