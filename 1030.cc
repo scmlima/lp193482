@@ -1,14 +1,16 @@
 /* --------------------------------------------------------------------------
 Disciplina  : Lógica de Programação, turma IB, 2026S1
 Nome        : Sarah Cristine Moraes Lima
-Linguagem   : C
+Linguagem   : C++
 Problema    : https://judge.beecrowd.com/pt/problems/view/1030
 Data        : 20/06/2026
 Objetivo    : realizar a contagem de sobreviventes após suicidio coletivo.
-Aprendizado : fórmula de Josephus
+Aprendizado : fórmula de Josephus, entrada e saída em C++
 -------------------------------------------------------------------------- */
 
-#include <stdio.h>
+#include <iostream>
+
+using namespace std;
 
 int sobr(int men, int jump){
     if(men == 1){
@@ -19,11 +21,11 @@ int sobr(int men, int jump){
 
 int main(){
     int nc;
-    scanf("%i", &nc);
+    cin >> nc;
     for(int i = 1; i <= nc; i++){
         int n, k;
-        scanf("%i %i", &n, &k);
-        printf("Case %i: %i\n", i, sobr(n, k) + 1);
+        cin >> n >> k;
+        cout << "Case " << i << ": " << sobr(n, k) +1 << endl;
         
         
     }
@@ -32,7 +34,8 @@ int main(){
 }
 
 /*-----------------------------------------------------
-                estudar a fórmula
-  omg
+                  anotações
+  estudar a fórmula
+  treinar using namespace std;
 
   --------------------------------------------------*/
