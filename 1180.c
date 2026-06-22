@@ -2,7 +2,7 @@
 Disciplina  : Lógica de Programação, turma IB, 2026S1
 Nome        : Sarah Cristine Moraes Lima
 Linguagem   : C
-Problema    : https://judge.beecrowd.com/pt/problems/view/1435
+Problema    : https://judge.beecrowd.com/pt/problems/view/1180
 Data        : 22/06/2026
 Objetivo    : printar o menor valor de um vetor tamnho x e sua posição
 Aprendizado : beecrowd me odeia
