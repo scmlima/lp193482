@@ -1,7 +1,7 @@
 /* --------------------------------------------------------------------------
 Disciplina  : Lógica de Programação, turma IB, 2026S1
 Nome        : Sarah Cristine Moraes Lima
-Linguagem   : C
+Linguagem   : C++
 Problema    : https://judge.beecrowd.com/pt/problems/view/1175
 Data        : 22/04/2026
 Objetivo    : inverter os valores inseridos num vetor de espaço 20
@@ -9,6 +9,9 @@ Aprendizado : inversão de valores;
 -------------------------------------------------------------------------- */
 
 #include <stdio.h>
+#include <iostream>
+
+using namespace std;
  
 int main() {
  
@@ -16,7 +19,7 @@ int main() {
    int aux[20];
    
    for(int i = 0; i < 20; i++){
-       scanf("%i", &n[i]);
+       cin >> n[i];
        aux[i] = n[i];
    }
    
@@ -26,8 +29,15 @@ int main() {
    }
    
    for(int i = 0; i < 20; i++){
-       printf("N[%i] = %i\n", i, n[i]);
+       cout << "N[" << i << "] = " << n[i] << "\n";
    }
  
     return 0;
 }
+
+/*-----------------------------------------------------------
+                    anotações
+ programadores são tipo vestibulandos: resolvem os problemas
+da sociedade em x quantidade de linhas. O que difere? são 
+poliglotas: java, C, python...
+ -----------------------------------------------------*/
