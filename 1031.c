@@ -1,13 +1,16 @@
 /* --------------------------------------------------------------------------
 Disciplina  : Lógica de Programação, turma IB, 2026S1
 Nome        : Sarah Cristine Moraes Lima
-Linguagem   : C
+Linguagem   : C++
 Problema    : https://judge.beecrowd.com/pt/problems/view/1031
 Data        : 20/06/2026
 Objetivo    : descobrir qual numero de saltos permite que a região 13 fique por ultimo, dado um numero selecionado pelo usuário.
 Aprendizado : lógica e funções.
 -------------------------------------------------------------------------- */
 #include <stdio.h>
+#include <iostream>
+
+using namespace std;
 
 int desligar(int n, int m){
     int reg[100]; //região
@@ -39,13 +42,13 @@ int desligar(int n, int m){
 
 int main(){
     int n;
-    while(scanf("%i", &n) != EOF){
+    while(cin >> n){
         if(n == 0){
                 break;
             }
         for(int m = 1; ; m++){
             if(desligar(n-1, m)== 13){
-                printf("%d\n", m);
+                cout << m << endl;
                     break;
             }
         
@@ -55,3 +58,13 @@ int main(){
 
     return 0;
 }
+
+    return 0;
+}
+
+/*---------------------------------------------
+                    anotações
+    em C++, o "while (cin >> n)" já funciona como 
+"while(scanf("%i", n) != EOF", ou seja: já funcio-
+na como um "enquanto tiver entrada".
+----------------------------------------------*/
