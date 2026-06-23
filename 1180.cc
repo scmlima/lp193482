@@ -37,3 +37,9 @@ int main(){
     
     return 0;
 }
+
+/*--------------------------------------------------
+                anotação
+ o beecrowd rejeitou meu codigo umas 4 vezes pq eu
+ esqueci de colocar \n no final... preciso de terapia
+--------------------------------------------------*/
