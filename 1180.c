@@ -1,7 +1,7 @@
 /* --------------------------------------------------------------------------
 Disciplina  : Lógica de Programação, turma IB, 2026S1
 Nome        : Sarah Cristine Moraes Lima
-Linguagem   : C
+Linguagem   : C++
 Problema    : https://judge.beecrowd.com/pt/problems/view/1180
 Data        : 22/06/2026
 Objetivo    : printar o menor valor de um vetor tamnho x e sua posição
@@ -9,10 +9,13 @@ Aprendizado : beecrowd me odeia
 -------------------------------------------------------------------------- */
 
 #include <stdio.h>
+#include <iostream>
+
+using namespace std;
 
 int main(){
     int n;
-    scanf("%i", &n);
+    cin >> n;
     int x[n];
     int menor, posicao;
     
@@ -29,7 +32,7 @@ int main(){
             posicao = i;
         }
     }
-    printf("Menor valor: %i\nPosicao: %i\n", menor, posicao);
+    cout << "Menor valor: " << menor << "\nPosicao: " << posicao << "\n";
 
     
     return 0;
