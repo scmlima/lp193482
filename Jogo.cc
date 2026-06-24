@@ -1,7 +1,7 @@
 /* --------------------------------------------------------------------------
 Disciplina  : Lógica de Programação, turma IB, 2026S1
 Nome        : Sarah Cristine Moraes Lima
-Linguagem   : C
+Linguagem   : C++
 Problema    : projeto final
 Data        : 24/06/2026
 Objetivo    : criar um jogo interativo de sudoku
@@ -9,6 +9,9 @@ Aprendizado : colocando em prática os conhecimentos do curso.
 -------------------------------------------------------------------------- */
 
 #include <stdio.h>
+#include <iostream>
+
+using namespace std;
 
 int checar_bloco(int matriz[9][9]){
 
@@ -87,19 +90,19 @@ int checar_coluna(int matriz[9][9]){
 }
 
 void imprimir_sudoku(int matriz[9][9]){
-    printf("===================\n");
+    cout << "===================\n";
     for(int l = 0; l < 9; l++){
         for(int c = 0; c < 9; c++){
 
             if(matriz[l][c] == 0){
-                printf("  ");
+                cout << "  ";
             } else {
-                printf("%2i", matriz[l][c]);
+                cout << " " << matriz[l][c];
             }
         }
-        printf("\n");
+        cout << "\n";
     }
-    printf("===================\n");
+    cout << "===================\n";
 }
 
 int partida(int matriz[9][9]){
@@ -137,41 +140,41 @@ int main(){
     while(partida(tab) == 1){
         imprimir_sudoku(tab);
 
-        printf("Digite a linha: \n");
-        scanf("%i", &linha);
-        printf("Digite a coluna: \n");
-        scanf("%i", &coluna);
+        cout << "Digite a linha: \n";
+        cin >> linha;
+        cout << "Digite a coluna: \n";
+        cin >> coluna;
 
         if(linha < 1 || linha > 9 || coluna < 1 || coluna > 9){
-            printf("Valores inválidos!\n");
-            printf("------------------------------------------\n");
+            cout << "Valores inválidos!\n";
+            cout << "------------------------------------------\n";
             continue;
         }
 
         if(tab[linha-1][coluna-1] != 0){
-            printf("não é possivel alterar esse valor\n");
-            printf("------------------------------------------\n");
+            cout << "não é possivel alterar esse valor\n";
+            cout << "------------------------------------------\n";
             continue;
         }
         
-        printf("Digite o numero desejado: \n");
-        scanf("%i", &numero);
+        cout << "Digite o numero desejado: \n";
+        cin >> numero;
 
         tab[linha-1][coluna-1] = numero;
 
         if(checar_bloco(tab) == 0 || checar_linha(tab) == 0 || checar_coluna(tab) == 0){
-            printf("numero inválido, tente novamente.\n");
+            cout << "numero inválido, tente novamente.\n";
             tab[linha-1][coluna-1] = 0;
         } else {
-            printf("Você acertou!\n");
+            cout << "Você acertou!\n";
         }
 
         if(partida(tab) == 0){
             imprimir_sudoku(tab);
-            printf("Parabéns, você ganhou!!!\n");
+            cout << "Parabéns, você ganhou!!!\n";
         }
 
-        printf("===============================\n");
+        cout << "===============================\n";
     }
     return 0;
 }
