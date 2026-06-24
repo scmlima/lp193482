@@ -3,33 +3,43 @@ Disciplina  : Lógica de Programação, turma IB, 2026S1
 Nome        : Sarah Cristine Moraes Lima
 Linguagem   : C
 Problema    : https://judge.beecrowd.com/pt/problems/view/1168
-Data        : /05/2026
-Objetivo    : 
-Aprendizado : 
+Data        : 24/05/2026
+Objetivo    : calcular a quantidade de leds para formar um determinado valor
+Aprendizado : uso de switch
 Dúvidas     : 
 -------------------------------------------------------------------------- */
 
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 
 int main(){
-    char V[101];
-    int N, resposta;
-    int leds[10] = {6, 2, 5, 5, 4, 5, 6, 3, 7, 6};
+    int n;
+    scanf("%i", &n);
 
-    scanf("%d\n", &N);
+    for(int i = 0; i < n; i++){
+        char valor[101];
+        int led = 0;
+        
+        scanf("%s", valor);
 
-    for(int i = 0; i < N; ++i){
-        scanf("%s", &V);
+        int tamanho = strlen(valor);
 
-        resposta = 0;
-        for(int j = 0; j < strlen(V); ++j){
-            resposta += leds[V[j] - '0'];
+        for(int j = 0; j < tamanho; j++){
+            switch (valor[j]) {
+                case '1': led += 2; break;
+                case '2': led += 5; break;
+                case '3': led += 5; break;
+                case '4': led += 4; break;
+                case '5': led += 5; break;
+                case '6': led += 6; break;
+                case '7': led += 3; break;
+                case '8': led += 7; break;
+                case '9': led += 6; break;
+                case '0': led += 6; break;
+            }
         }
-
-        printf("%d leds\n", resposta);
+        printf("%i leds\n", led);
     }
-
     return 0;
 }
 
