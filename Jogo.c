@@ -167,11 +167,11 @@ int main(){
         }
 
         if(partida(tab) == 0){
-            imprimir_sudoku;
-            printf("Parabéns, você ganhou!!!");
+            imprimir_sudoku(tab);
+            printf("Parabéns, você ganhou!!!\n");
         }
 
-        printf("===============================");
-    }   
-   return 0;
+        printf("===============================\n");
+    }
+    return 0;
 }
