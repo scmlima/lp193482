@@ -1,3 +1,13 @@
+/* --------------------------------------------------------------------------
+Disciplina  : Lógica de Programação, turma IB, 2026S1
+Nome        : Sarah Cristine Moraes Lima
+Linguagem   : C
+Problema    : projeto final
+Data        : 24/06/2026
+Objetivo    : criar um jogo interativo de sudoku
+Aprendizado : colocando em prática os conhecimentos do curso.
+-------------------------------------------------------------------------- */
+
 #include <stdio.h>
 
 int checar_bloco(int matriz[9][9]){
@@ -98,12 +108,12 @@ int partida(int matriz[9][9]){
         for(int c = 0; c < 9; c++){
 
             if(matriz[l][c] == 0){
-                return 1;
+                return 1; //jogando
             }
             
         }
     }
-    return 0;
+    return 0; // acabou|ganhou
 }
 
 
@@ -138,7 +148,7 @@ int main(){
             continue;
         }
 
-        if(tab[linha][coluna] != 0){
+        if(tab[linha-1][coluna-1] != 0){
             printf("não é possivel alterar esse valor\n");
             printf("------------------------------------------\n");
             continue;
@@ -148,19 +158,20 @@ int main(){
         scanf("%i", &numero);
 
         tab[linha-1][coluna-1] = numero;
-        
-    }
-    
-    
 
-   
-    
+        if(checar_bloco(tab) == 0 || checar_linha(tab) == 0 || checar_coluna(tab) == 0){
+            printf("numero inválido, tente novamente.\n");
+            tab[linha-1][coluna-1] = 0;
+        } else {
+            printf("Você acertou!\n");
+        }
 
+        if(partida(tab) == 0){
+            imprimir_sudoku;
+            printf("Parabéns, você ganhou!!!");
+        }
 
-    return 0;
+        printf("===============================");
+    }   
+   return 0;
 }
-
-
-
-
-
