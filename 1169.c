@@ -1,30 +1,35 @@
+/* --------------------------------------------------------------------------
+Disciplina  : Lógica de Programação, turma IB, 2026S1
+Nome        : Sarah Cristine Moraes Lima
+Linguagem   : C
+Problema    : https://judge.beecrowd.com/pt/problems/view/1169
+Data        : 24/06/2026
+Objetivo    : calcular o peso de grãos após aumento exponencial.
+Aprendizado : função recursiva e unsigned long long.
+-------------------------------------------------------------------------- */
+
 #include <stdio.h>
 
-int main() {
+unsigned long long quantidade_graos(int x){
+    unsigned long long graos = 1;
+    if(x == 1) return 1;
+    graos += quantidade_graos(x-1)*2;
+    return graos;
+}
 
-    int testes;
-    int casas;
+int main(){
 
-    scanf("%d", &testes);
+    int n;
+    scanf("%i", &n);
 
-    while (testes > 0) {
+    for(int i = 0; i < n; i++){
+        unsigned long long quilos;
+        int x;
+        scanf("%i", &x);
+        quilos = (quantidade_graos(x)/12000);
 
-        scanf("%d", &casas);
-
-        unsigned long long graos = 1;
-        unsigned long long total = 0;
-
-        for (int i = 1; i <= casas; i++) {
-
-            total += graos;
-
-            graos = graos * 2;
-        }
-
-        printf("%llu kg\n", total / 12000);
-
-        testes--;
+        printf("%llu kg\n", quilos);
     }
-
+    
     return 0;
 }
